@@ -16,7 +16,7 @@ function TodosList() {
   };
 
   const DeleteTodo = async (id) => {
-    const res = await axios.delete("https://todo-backend74745.onrender.comtodos/delete/" + id);
+    const res = await axios.delete("https://todo-backend74745.onrender.com/todos/delete/" + id);
 
     if (res) {
       getTodoList();
