@@ -6,7 +6,7 @@ function TodosList() {
   const [todoList, setTodoList] = useState([]);
   const navigate = useNavigate();
   const getTodoList = async () => {
-    const res = await axios.get("http://localhost:4000/todos");
+    const res = await axios.get("https://todo-backend74745.onrender.com/todos");
     if (res) {
       const result = res?.data?.map((res) => {
         return { id: res._id, ...res };
@@ -16,7 +16,7 @@ function TodosList() {
   };
 
   const DeleteTodo = async (id) => {
-    const res = await axios.delete("http://localhost:4000/todos/delete/" + id);
+    const res = await axios.delete("https://todo-backend74745.onrender.comtodos/delete/" + id);
 
     if (res) {
       getTodoList();

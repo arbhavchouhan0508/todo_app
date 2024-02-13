@@ -22,7 +22,7 @@ function CreateTodo() {
     ) {
       alert("Please enter a all field");
     } else {
-      const res = await axios.post("http://localhost:4000/todos/add", state);
+      const res = await axios.post("https://todo-backend74745.onrender.com/todos/add", state);
       if (res) {
         setState({
           todo_description: "",

@@ -11,7 +11,7 @@ function EditTodo() {
     todo_priority: "",
   });
   const getTodoList = async () => {
-    const res = await axios.get("http://localhost:4000/todos/" + id);
+    const res = await axios.get("https://todo-backend74745.onrender.com/todos/" + id);
     if (res) {
       setState({
         todo_description: res.data.todo_description,
@@ -36,7 +36,7 @@ function EditTodo() {
     } else {
       console.log(state);
       const res = await axios.put(
-        "http://localhost:4000/todos/update/" + id,
+        "https://todo-backend74745.onrender.com/todos/update/" + id,
         state
       );
       if (res) {
